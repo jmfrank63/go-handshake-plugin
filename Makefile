@@ -7,9 +7,9 @@ GOFLAGS ?=
 # If set, override the install location for plugins
 IPFS_PATH ?= $(HOME)/.ipfs
 # Just to inform the user which kubo-version go.mod uses.
-IPFS_VERSION = $(lastword $(shell $(GOCC) list -m github.com/ipfs/kubo))
+IPFS_VERSION = $(lastword $(shell $(GOCC) list -m github.com/jmfrank63/kubo))
 
-GOFLAGS += -trimpath
+GOFLAGS += -trimpath -tags=nofuse
 
 .PHONY: install build
 
