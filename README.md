@@ -4,7 +4,7 @@
 [![](https://img.shields.io/badge/project-IPFS-blue.svg?style=flat-square)](https://ipfs.io/)
 [![](https://img.shields.io/badge/freenode-%23ipfs-blue.svg?style=flat-square)](http://webchat.freenode.net/?channels=%23ipfs)
 [![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
-[![GoDoc](https://godoc.org/github.com/jmfrank63/go-handshake-plugin?status.svg)](https://godoc.org/github.com/jmfrank63/go-handshake-plugin)
+[![GoDoc](https://godoc.org/github.com/ipfs/go-handshake-plugin?status.svg)](https://godoc.org/github.com/ipfs/go-handshake-plugin)
 
 > example plugin for Kubo
 
@@ -23,11 +23,11 @@ Packages:
 Go plugin system is very whiny. The following constellation need to align:
 
 * You need to be using the same Go version to compile Kubo and the plugin. Upstream releases of Kubo use [whatever it says here](https://github.com/ipfs/distributions/blob/master/.tool-versions#L2) (v0.19.10) at the time of writing.
-* The dependencies in go.mod need to be exactly the same as in the Kubo version that we want the plugin to work with. In this example, the following need to be the same as in [Kubo's go.mod](https://github.com/jmfrank63/kubo/blob/master/go.mod):
+* The dependencies in go.mod need to be exactly the same as in the Kubo version that we want the plugin to work with. In this example, the following need to be the same as in [Kubo's go.mod](https://github.com/ipfs/kubo/blob/master/go.mod):
   * github.com/ipfs/boxo
   * github.com/ipfs/go-datastore
   * github.com/ipfs/go-ipfs-delay
-  * github.com/jmfrank63/kubo
+  * github.com/ipfs/kubo
 * There are additional consideration with -trimpath etc (see below).
 * Failure to do so will cause errors when loading the plugin.
 
@@ -45,7 +45,7 @@ to build and install this version.
 
 If you want to upgrade or use a different official release of Kubo:
 
-  1. `go get github.com/jmfrank63/kubo@<version>`
+  1. `go get github.com/ipfs/kubo@<version>`
   2. Verify `boxo`, `datastore` and other dependencies are aligned with the version of Kubo. Otherwise set the right versions manually.
   3. `go mod tidy`.
 
@@ -63,7 +63,7 @@ If Go versions and dependencies are aligned, usually errors have to do with `-tr
 
 ## Contribute
 
-Feel free to join in. All welcome. Open an [issue](https://github.com/jmfrank63/go-handshake-plugin/issues)!
+Feel free to join in. All welcome. Open an [issue](https://github.com/ipfs/go-handshake-plugin/issues)!
 
 This repository falls under the IPFS [Code of Conduct](https://github.com/ipfs/community/blob/master/code-of-conduct.md).
 

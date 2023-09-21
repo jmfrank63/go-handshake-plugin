@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	coreiface "github.com/ipfs/boxo/coreiface"
-	plugin "github.com/jmfrank63/kubo/plugin"
+	plugin "github.com/ipfs/kubo/plugin"
 )
 
 type GreeterPlugin struct{}

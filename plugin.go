@@ -1,9 +1,9 @@
 package example
 
 import (
-	"github.com/jmfrank63/kubo/plugin"
+	"github.com/ipfs/kubo/plugin"
 
-	greeter "github.com/jmfrank63/go-handshake-plugin/greeter"
+	greeter "github.com/ipfs/go-handshake-plugin/greeter"
 )
 
 // Plugins is an exported list of plugins that will be loaded by Kubo.
